@@ -2,6 +2,11 @@ import express from "express";
 import cors from "cors";
 import { scrapeForMultipleUsers } from "./scraper.js"
 import path from "path";
+import { fileURLToPath } from "url";
+
+// ✅ Fix for __dirname and __filename in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 app.use(cors());
