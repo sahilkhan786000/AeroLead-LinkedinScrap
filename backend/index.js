@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { scrapeForMultipleUsers } from "./scraper.js"
+import path from "path";
 
 const app = express();
 app.use(cors());
